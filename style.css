@@ -1,0 +1,150 @@
+:root {
+    font-size: 62.5%;
+    --tw: hsla(0, 0%, 100%, 0.75);
+    --vlg: hsl(0, 0%, 95%);
+    --sedan: hsl(31, 77%, 52%);
+    --suvs: hsl(184, 100%, 22%);
+    --luxury:hsl(179, 100%, 13%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    width: 90rem;
+    height: 50rem;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+}
+
+section {
+    height: 50rem;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+section *{
+    margin-bottom: 3rem;
+}
+
+h2 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 4rem;
+    color: var(--vlg);
+    text-transform: uppercase;
+}
+
+p{
+    font-size: 1.5rem;
+    color: var(--tw);
+    line-height: 2.5rem;
+}
+
+button{
+    margin: auto 0 0;
+    text-transform: capitalize;
+    padding: 1rem 2.5rem;
+    border-radius: 25px;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+/* _______sedans________ */
+
+section:nth-of-type(1) {
+    background-color: var(--sedan);
+    border-radius: 15px 0 0 15px;
+}
+
+section:nth-of-type(1) button{
+    color: var(--sedan);
+}
+
+section:nth-of-type(1) button:hover{
+    background-color: var(--sedan);
+    color: var(--tw);
+    border: 2px solid var(--tw);
+}
+
+/* _________SUVs__________ */
+
+section:nth-of-type(2) {
+    background-color: var(--suvs);
+}
+section:nth-of-type(2) button{
+    color: var(--suvs);
+}
+section:nth-of-type(2) button:hover{
+    background-color: var(--suvs);
+    color: var(--tw);
+    border: 2px solid var(--tw);
+}
+
+/* _________luxury__________ */
+
+section:nth-of-type(3) {
+    background-color: var(--luxury);
+    border-radius: 0 15px 15px 0;
+}
+section:nth-of-type(3) button{
+    color: var(--luxury);
+}
+section:nth-of-type(3) button:hover{
+    background-color: var(--luxury);
+    color: var(--tw);
+    border: 2px solid var(--tw);
+}
+
+/* ________attribution________ */
+
+.attribution {
+    margin-top: auto;
+}
+
+/* ________responsive_______ */
+
+@media screen and (max-width:915px) {
+    body{
+        height: 220vh;
+    }
+    main{
+        width: calc(100vw - 1rem);
+        flex-direction: column;
+        height: 220vh;
+        margin-top: 5rem;
+    }
+    section{
+        max-width: 37.5rem;
+        width: 90%;
+    }
+    section:nth-of-type(1) {
+        border-radius: 15px 15px 0 0;
+    }
+    section:nth-of-type(2) {
+        border-radius: 0;
+    }
+    section:nth-of-type(3) {
+        border-radius: 0 0 15px 15px;
+    }
+    .attribution {
+        margin-top: none;
+    }
+
+}
